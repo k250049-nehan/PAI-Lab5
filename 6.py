@@ -5,14 +5,12 @@ url="https://jsonplaceholder.typicode.com/posts"
 
 
 try:
-    # GET
+
     response=requests.get(url+"/1",timeout=5)
 
     print("GET Status:",response.status_code)
     print("GET Response:",response.json())
 
-
-    # POST
     new_data={
         "title":"AI Image Prediction",
         "body":"Image classified successfully",
@@ -24,8 +22,6 @@ try:
     print("\nPOST Status:",response.status_code)
     print("POST Response:",response.json())
 
-
-    # PUT
     updated_data={
         "id":1,
         "title":"Updated AI Prediction",
@@ -38,8 +34,6 @@ try:
     print("\nPUT Status:",response.status_code)
     print("PUT Response:",response.json())
 
-
-    # DELETE
     response=requests.delete(url+"/1",timeout=5)
 
     print("\nDELETE Status:",response.status_code)
