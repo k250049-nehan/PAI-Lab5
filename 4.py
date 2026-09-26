@@ -1,6 +1,5 @@
 import requests
 
-
 try:
     url="https://jsonplaceholder.typicode.com/posts"
 
